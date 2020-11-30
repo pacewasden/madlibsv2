@@ -19,5 +19,12 @@ from madlib import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index )
+    path('', views.index ),
+    path('game1/', views.game1),  
+    path('game2/', views.game2),    
+    path('game3/', views.game3),    
+    path('game4/', views.game4),    
+    path('game5/', views.game5),    
+
+
 ]
