@@ -1,8 +1,8 @@
 {% block body %}
-<h1>{{word_list.verb}}</h1>
-<h1>{{word_list.adjective}}</h1>
-<h1>{{word_list.place}}</h1>
-<h1>{{word_list.athlete}}</h1>
-<h1>{{word_list.school}}</h1>
-<a href="{% url 'madlib:deletewords' %}">Test</a>
+<h1>{{word_list.sport}} is the hardest sport to play.</h1>
+<h1>This time of year makes me feel {{word_list.adjective}}.</h1>
+<h1>{{word_list.place}} is the worst vaction place.</h1>
+<h1>If I was an athlete, I would want to be {{word_list.athlete}}</h1>
+<h1>{{word_list.school}} is where I go to school</h1>
+<a href="{% url 'madlib:deletewords' %}">New Game</a>
 {% endblock %}

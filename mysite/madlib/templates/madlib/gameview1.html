@@ -1,8 +1,7 @@
 {% block body %}
-<h1>{{word_list.verb}}</h1>
-<h1>{{word_list.adjective}}</h1>
-<h1>{{word_list.place}}</h1>
-<h1>{{word_list.athlete}}</h1>
-<h1>{{word_list.school}}</h1>
-<a href="{% url 'madlib:deletewords' %}">Test</a>
+<p>I go to {{word_list.school}} school in {{word_list.city}}.
+{{word_list.sport}} is the reason that I came to this school, but when I play
+bad it makes me feel {{word_list.action}}. One of my goals is to visit {{word_list.place}},
+so that I can play {{word_list.sport}}. {{word_list.person}} is my hero and I want to meet them.</p>
+<a href="{% url 'madlib:deletewords' %}">New Game</a>
 {% endblock %}
