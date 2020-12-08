@@ -8,9 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    {% block body %}
-        <p>This is game 3</p>
+    {% block body%}
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Save</button>
+        </form>
     {% endblock %}
-    
 </body>
 </html>

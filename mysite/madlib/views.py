@@ -18,14 +18,15 @@ def word_list(request):
 
 def gameview(request):
     word_list = Words.objects.filter()[:1].get()
-    #    template = loader.get_template('hobbies/index.html')
     context = {
         'word_list': word_list,
     }
     return render(request, 'madlib/gameview1.html', context)
 
-def delete_word(request):
+
+def deletewords(request):
     word_list = Words.objects.filter()[:1].get()
-    if request.method('POST'):
+    if request.method == 'POST':
         word_list.delete()
-    return redirect(request, 'madlibs/index.html', {'word_list': word_list})
+        return redirect('madlib:index')
+    return render(request, 'madlib/deleteword.html',{'word_list':word_list})

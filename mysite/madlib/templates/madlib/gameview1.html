@@ -4,9 +4,5 @@
 <h1>{{word_list.place}}</h1>
 <h1>{{word_list.athlete}}</h1>
 <h1>{{word_list.school}}</h1>
-<form method="POST">
-    {% csrf_token %}
-    <button type="submit">RESTART</button>
-</form>
-
+<a href="{% url 'madlib:deletewords' %}">Test</a>
 {% endblock %}

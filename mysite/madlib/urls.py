@@ -1,7 +1,10 @@
 from . import views
 from django.urls import path
 
-app_name='words'
+app_name='madlib'
 urlpatterns = [
-    path('game1/', views.delete_word, name="delete_word")
+    path('', views.index, name='index'),
+    path('game1/', views.word_list, name='word_list'),
+    path('gameview1.html/', views.gameview, name='gameview'),
+    path('deletewords/', views.deletewords, name='deletewords')
 ]
